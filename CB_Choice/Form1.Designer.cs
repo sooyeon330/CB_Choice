@@ -28,13 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cbList = new System.Windows.Forms.ComboBox();
+            this.txtList = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // cbList
+            // 
+            this.cbList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbList.FormattingEnabled = true;
+            this.cbList.Location = new System.Drawing.Point(25, 42);
+            this.cbList.Name = "cbList";
+            this.cbList.Size = new System.Drawing.Size(275, 20);
+            this.cbList.TabIndex = 0;
+            // 
+            // txtList
+            // 
+            this.txtList.Location = new System.Drawing.Point(25, 13);
+            this.txtList.Name = "txtList";
+            this.txtList.Size = new System.Drawing.Size(183, 21);
+            this.txtList.TabIndex = 1;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(225, 13);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblResult.Location = new System.Drawing.Point(21, 90);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(112, 21);
+            this.lblResult.TabIndex = 3;
+            this.lblResult.Text = "선택한 메뉴 : ";
+            this.lblResult.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(325, 140);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtList);
+            this.Controls.Add(this.cbList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.Text = "메뉴 선택 추가";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbList;
+        private System.Windows.Forms.TextBox txtList;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
